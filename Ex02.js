@@ -36,7 +36,6 @@ let courses = JSON.parse(localStorage.getItem('courses')) || [
     const assignedTo = document.getElementById('assignedTo').value;
   
     if (editingId) {
-      // Update
       courses = courses.map(course =>
         course.id === editingId
           ? { id: course.id, content, dueDate, status, assignedTo }
@@ -44,7 +43,6 @@ let courses = JSON.parse(localStorage.getItem('courses')) || [
       );
       editingId = null;
     } else {
-      // Add new
       const newTask = {
         id: Date.now(),
         content,
