@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    table {
+      width: 100%;
+    }
+    input, select, button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Task Management</h2>
+  <input type="text" id="content" placeholder="Content">
+  <input type="date" id="dueDate">
+  <select id="status">
+    <option value="Pending">Pending</option>
+    <option value="Completed">Completed</option>
+  </select>
+  <input type="text" id="assignedTo" placeholder="Username">
+  <button onclick="addOrUpdateTask()">Submit</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Content</th>
+        <th>Due date</th>
+        <th>Status</th>
+        <th>Assigned to</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="taskTable"></tbody>
+  </table>
+
+  <script src="Ex02.js"></script>
+</body>
+</html>
